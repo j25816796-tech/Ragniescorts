@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ragini — a directory for verified adult companionship and professional event hosting.">
+  <title>Ragini | Luxury Directory</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 18+ AGE VERIFICATION -->
+  <div class="age-screen" id="ageScreen">
+    <div class="age-card">
+      <div class="logo-circle">R</div>
+      <p class="gold-text">PRIVATE • DISCREET • RESPECTFUL</p>
+      <h1>Welcome to Ragini</h1>
+      <p>This directory is intended only for adults aged 18+.</p>
+      <p>It is for lawful, non-sexual companionship and professional event hosting.</p>
+      <button class="gold-btn" id="enterBtn">
+        I AM 18 OR OLDER
+      </button>
+      <button class="outline-btn" id="leaveBtn">Exit</button>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <a href="index.html" class="brand">
+      <span class="brand-logo">R</span>
+      <span>
+        RAGINI
+        <small>PRIVATE DIRECTORY</small>
+      </span>
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#profiles">Profiles</a>
+      <a href="#about">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="gold-text">THE ART OF GOOD COMPANY</p>
+
+        <h1>
+          Discover<br>
+          <span>Beautiful Connections</span>
+        </h1>
+
+        <p>
+          Explore verified adult profiles for conversation,
+          social occasions and professional event hosting.
+          Respect, privacy and personal boundaries come first.
+        </p>
+
+        <a href="#profiles" class="gold-btn">
+          EXPLORE PROFILES →
+        </a>
+
+        <div class="hero-note">
+          18+ ONLY | RESPECT | DISCRETION
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="hero-letter">R</div>
+        <p>RAGINI<br>PRIVATE DIRECTORY</p>
+      </div>
+    </section>
+
+    <!-- TRUST SECTION -->
+    <section class="trust-section">
+      <div>
+        <h3>18+</h3>
+        <p>Adults Only</p>
+      </div>
+
+      <div>
+        <h3>Privacy</h3>
+        <p>Respectful Enquiries</p>
+      </div>
+
+      <div>
+        <h3>Verified</h3>
+        <p>Consent-led Profiles</p>
+      </div>
+
+      <div>
+        <h3>Respect</h3>
+        <p>Clear Boundaries</p>
+      </div>
+    </section>
+
+    <!-- PROFILE SECTION -->
+    <section class="profiles-section" id="profiles">
+      <div class="section-heading">
+        <p class="gold-text">DISCOVER OUR DIRECTORY</p>
+        <h2>Featured Profiles</h2>
+        <p>
+          Demo profiles are fictional placeholders.
+          Real profiles require adult verification and consent.
+        </p>
+      </div>
+
+      <div class="search-area">
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search profiles..."
+        >
+
+        <select id="locationFilter">
+          <option value="">All Locations</option>
+        </select>
+
+        <select id="sortFilter">
+          <option value="featured">Featured First</option>
+          <option value="name">Name A-Z</option>
+          <option value="newest">Recently Added</option>
+        </select>
+      </div>
+
+      <div class="profile-grid" id="profileGrid">
+        <!-- Profiles will load through app.js -->
+      </div>
+
+      <p id="emptyState" class="empty-state hidden">
+        No profiles found.
+      </p>
+
+      <div id="pagination" class="pagination"></div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+      <p class="gold-text">ABOUT RAGINI</p>
+
+      <h2>Respect Is Always In Style.</h2>
+
+      <p>
+        Ragini is a directory concept for lawful,
+        non-sexual adult companionship and professional
+        event-hosting enquiries.
+      </p>
+
+      <p>
+        Profiles may be published only with the informed
+        permission of verified adults. All communication
+        must remain respectful and within agreed boundaries.
+      </p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+      <div>
+        <p class="gold-text">GET IN TOUCH</p>
+        <h2>Have a Question?</h2>
+        <p>For general enquiries, contact our team.</p>
+      </div>
+
+      <a
+        href="mailto:hello@raginidirectory.example"
+        class="outline-btn"
+      >
+        CONTACT US →
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="brand">
+      <span class="brand-logo">R</span>
+      <span>
+        RAGINI
+        <small>PRIVATE DIRECTORY</small>
+      </span>
+    </div>
+
+    <p>© <span id="year"></span> Ragini. All rights reserved.</p>
+
+    <a href="privacy.html">Privacy Policy</a>
+  </footer>
+
+  <!-- PROFILE DETAILS MODAL -->
+  <div class="modal hidden" id="profileModal">
+    <div class="modal-content">
+      <button class="close-btn" id="closeModal">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
