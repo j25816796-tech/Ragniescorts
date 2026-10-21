@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ragini Admin Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <a href="index.html" class="brand">
+    <span class="brand-logo">R</span>
+    <span>RAGINI<small>ADMIN PANEL</small></span>
+  </a>
+  <nav><a href="index.html">View Website</a></nav>
+</header>
+
+<main style="max-width:1000px;margin:45px auto;padding:20px">
+
+<section id="loginPanel" class="age-card">
+  <h1>Admin Login</h1>
+  <p>Authorized administrator access only.</p>
+
+  <form id="loginForm">
+    <input id="username" placeholder="Username" required>
+    <br><br>
+    <input id="password" type="password"
+      placeholder="Password" required>
+    <br><br>
+    <button class="gold-btn">Login</button>
+  </form>
+
+  <p id="loginError"></p>
+</section>
+
+<section id="dashboard" class="hidden">
+  <h1>Admin Dashboard</h1>
+
+  <p class="gold-text">
+    Manage verified, consenting adult directory profiles.
+  </p>
+
+  <p class="notice">
+    Demo only: browser storage is not secure or shared
+    between devices. Use a secure backend before launch.
+  </p>
+
+  <section class="age-card">
+    <h2 id="formTitle">Add New Profile</h2>
+
+    <form id="profileForm">
+      <input type="hidden" id="profileId">
+
+      <input id="pName"
+        placeholder="Display name" required>
+      <br><br>
+
+      <input id="pAge" type="number"
+        min="18" max="99" placeholder="Age (18+)" required>
+      <br><br>
+
+      <input id="pCity"
+        placeholder="City" required>
+      <br><br>
+
+      <input id="pArea"
+        placeholder="Area">
+      <br><br>
+
+      <select id="pRole">
+        <option>Professional Event Host</option>
+        <option>Social Event Host</option>
+        <option>Conversation & Cultural Events</option>
+      </select>
+      <br><br>
+
+      <textarea id="pBio"
+        placeholder="Profile description"
+        required></textarea>
+      <br><br>
+
+      <label>
+        <input type="checkbox" id="pFeatured">
+        Featured profile
+      </label>
+      <br><br>
+
+      <button class="gold-btn">Save Profile</button>
+      <button type="button" class="outline-btn"
+        id="resetForm">Clear</button>
+    </form>
+  </section>
+
+  <section class="age-card" style="margin-top:25px">
+    <h2>Manage Profiles</h2>
+    <div id="profileTable"></div>
+  </section>
+
+  <section class="age-card" style="margin-top:25px">
+    <h2>Enquiries</h2>
+    <button id="exportBtn" class="outline-btn">
+      Export Enquiries CSV
+    </button>
+    <div id="enquiryList"></div>
+  </section>
+
+  <button id="logoutBtn" class="outline-btn">
+    Logout
+  </button>
+</section>
+
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>
