@@ -314,3 +314,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 window.changePage = changePage;
 window.viewProfile = viewProfile;
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelectorAll("#home .hero-slide");
+  let current = 0;
+
+  if (slides.length > 1) {
+    setInterval(function () {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+    }, 4000);
+  }
+});
