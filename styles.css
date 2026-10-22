@@ -326,3 +326,68 @@ nav a:hover {
     display: block;
   }
 }
+/* Hero slideshow */
+.hero-slideshow {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+  height: 70vh;
+  max-height: 720px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #17131b;
+  color: #fff;
+}
+
+.hero-slideshow .hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hero-slideshow .hero-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.48);
+}
+
+.hero-slideshow .hero-slide.active {
+  opacity: 1;
+}
+
+.hero-slideshow .hero-content {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 24px;
+  color: #fff;
+}
+
+.hero-slideshow h1 {
+  font-size: clamp(30px, 5vw, 62px);
+  line-height: 1.2;
+}
+
+.hero-slideshow h1 span {
+  font-size: 0.65em;
+}
+
+@media (max-width: 600px) {
+  .hero-slideshow {
+    min-height: 440px;
+    height: 65vh;
+  }
+
+  .hero-slideshow .hero-content {
+    padding: 14px;
+  }
+}
