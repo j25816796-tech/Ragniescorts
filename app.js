@@ -326,3 +326,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 4000);
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const menuButton = document.getElementById("menuToggle");
+  const nav = document.getElementById("mainNav");
+
+  if (!menuButton || !nav) return;
+
+  menuButton.addEventListener("click", function () {
+    const isOpen = nav.classList.toggle("menu-open");
+
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+
+    menuButton.textContent = isOpen ? "✕" : "☰";
+  });
+
+  nav.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      nav.classList.remove("menu-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Open navigation menu");
+      menuButton.textContent = "☰";
+    });
+  });
+});
