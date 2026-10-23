@@ -383,8 +383,8 @@ nav a:hover {
 
 @media (max-width: 600px) {
   .hero-slideshow {
-    min-height: 440px;
-    height: 65vh;
+    min-height: 700px;
+    height: auto;
   }
 
   .hero-slideshow .hero-content {
