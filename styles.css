@@ -558,3 +558,58 @@ nav a:hover {
     display: flex;
   }
 }
+/* Homepage Blush Pink Theme */
+:root {
+  --pink-main: #e88da5;
+  --pink-dark: #c95f7c;
+  --pink-light: #fff0f3;
+  --cream: #fffaf5;
+  --text-color: #55434a;
+}
+
+body {
+  background-color: var(--pink-light);
+  color: var(--text-color);
+}
+
+.header {
+  background: var(--cream);
+  border-bottom: 1px solid #f3d2da;
+}
+
+.brand {
+  color: var(--pink-dark);
+}
+
+.header nav a {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+  color: var(--pink-dark);
+}
+
+.menu-toggle {
+  background: var(--pink-main);
+  color: white;
+  border-radius: 12px;
+}
+
+.hero {
+  border-radius: 0 0 24px 24px;
+  overflow: hidden;
+}
+
+button,
+.btn,
+.button {
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+button:hover,
+.btn:hover,
+.button:hover {
+  transform: translateY(-2px);
+}
