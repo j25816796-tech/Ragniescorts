@@ -330,7 +330,7 @@ nav a:hover {
 .hero-slideshow {
   position: relative;
   width: 100%;
-  min-height: 700px;
+  min-height: 500px;
   height: auto;
   max-height: none;
   overflow: hidden;
