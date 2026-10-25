@@ -208,10 +208,13 @@ uniqueLocations.sort();
 
   grid.innerHTML = visibleProfiles.map(profile => `
     <article class="profile-card">
-      <div class="portrait">
-        ${escapeHTML(profile.name.charAt(0))}
-      </div>
-
+     <div class="portrait">
+  ${
+    profile.image
+      ? `<img src="${escapeHTML(profile.image)}" alt="${escapeHTML(profile.name)}" class="profile-photo">`
+      : escapeHTML(profile.name.charAt(0))
+  }
+</div>
       <div class="info">
         <h3>
           ${escapeHTML(profile.name)}, ${Number(profile.age)}
