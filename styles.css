@@ -611,3 +611,28 @@ button:hover,
 .button:hover {
   transform: translateY(-2px);
 }
+/* Readable hero content — final override */
+.hero-slideshow .hero-content {
+  width: 100%;
+  max-width: none;
+}
+
+.hero-slideshow .hero-content > p:not(.gold-text):not(.hero-note) {
+  max-width: 100%;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #f7f4ee;
+  overflow-wrap: anywhere;
+}
+
+.hero-slideshow .hero-content h1 {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .hero-slideshow .hero-content > p:not(.gold-text):not(.hero-note) {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
