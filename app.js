@@ -5,6 +5,7 @@ const demoProfiles = [
   {
     id: "1",
     name: "Aanya",
+    image: "aanya.jpeg",
     age: 27,
     city: "Delhi",
     area: "Aerocity",
