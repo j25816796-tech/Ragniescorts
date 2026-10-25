@@ -43,6 +43,9 @@ const $ = id => document.getElementById(id);
 function getProfiles() {
   let saved = localStorage.getItem(PROFILE_KEY);
 
+  function getProfiles() {
+  let saved = localStorage.getItem(PROFILE_KEY);
+
   if (!saved) {
     localStorage.setItem(
       PROFILE_KEY,
@@ -52,7 +55,22 @@ function getProfiles() {
     return demoProfiles;
   }
 
-  return JSON.parse(saved);
+  const savedProfiles = JSON.parse(saved);
+
+  return savedProfiles.map(profile => {
+    const demoProfile = demoProfiles.find(
+      item => item.id === profile.id
+    );
+
+    if (demoProfile && demoProfile.image && !profile.image) {
+      return {
+        ...profile,
+        image: demoProfile.image
+      };
+    }
+
+    return profile;
+  });
 }
 
 function escapeHTML(value) {
