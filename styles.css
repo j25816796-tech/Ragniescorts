@@ -1,11 +1,11 @@
 :root {
-  --black: #0c0b0a;
-  --panel: #191511;
-  --gold: #c9a45c;
-  --pale: #ead29b;
-  --white: #f5f0e7;
-  --muted: #aaa096;
-  --line: #393027;
+  --black: #101522;
+  --panel: #171b2b;
+  --gold: #d4af65;
+  --pale: #f1dca8;
+  --white: #f7f4ee;
+  --muted: #c0c5d2;
+  --line: #343b50;
 }
 
 * {
