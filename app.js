@@ -455,3 +455,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+document.getElementById("enterBtn").addEventListener("click", function () {
+  document.getElementById("ageScreen").classList.add("hidden");
+  sessionStorage.setItem("ragini18", "yes");
+});
