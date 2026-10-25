@@ -78,16 +78,79 @@ function renderProfiles() {
   const location = $("locationFilter").value;
   const sort = $("sortFilter").value;
 
-  const locations = [
-    ...new Set(profiles.map(p => p.city))
-  ].sort();
+ const locations = [
+  "Delhi",
+  "Dwarka",
+  "Aerocity",
+  "Mahipalpur",
+  "Janakpuri",
+  "Uttam Nagar",
+  "Adarsh Colony",
+  "Anand Vihar",
+  "Ashok Nagar",
+  "Azadpur",
+  "Bawana",
+  "Mayapuri",
+  "Saket",
+  "Munirka",
+  "Pari Chowk",
+  "Safdarjung",
+  "South Extension",
+  "Rohini",
+  "Paschim Vihar",
+  "Mukherjee Nagar",
+  "Chanakyapuri",
+  "Chandni Chowk",
+  "Chawri Bazar",
+  "Chhattarpur",
+  "Connaught Place",
+  "Rajendra Nagar",
+  "RK Puram",
+  "Vasant Kunj",
+  "Vasant Vihar",
+  "Karol Bagh",
+  "Lajpat Nagar",
+  "Paharganj",
+  "Pitampura",
+  "Dhaula Kuan",
+  "Dilshad Garden",
+  "Govindpuri",
+  "Green Park",
+  "Nehru Place",
+  "Nizamuddin",
+  "Okhla",
+  "Vikaspuri",
+  "Rajouri Garden",
+  "Tilak Nagar",
+  "Kamla Nagar",
+  "Hauz Khas",
+  "Kalkaji",
+  "Malviya Nagar",
+  "Mehrauli",
+  "Patel Nagar",
+  "Mayur Vihar",
+  "Manesar",
+  "Gurgaon",
+  "IGI Airport",
+  "Noida",
+  "Greater Noida",
+  "Faridabad",
+  "New Friends Colony",
+  "Shahdara",
+  "Swaroop Nagar",
+  "Indirapuram",
+  ...profiles.map(p => p.city).filter(Boolean)
+];
+
+const uniqueLocations = [...new Set(locations)];
+uniqueLocations.sort();
 
   const locationSelect = $("locationFilter");
   const previousLocation = locationSelect.value;
 
   locationSelect.innerHTML =
     '<option value="">All Locations</option>' +
-    locations.map(city =>
+    uniqueLocations.map(city =>
       `<option value="${escapeHTML(city)}">${escapeHTML(city)}</option>`
     ).join("");
 
