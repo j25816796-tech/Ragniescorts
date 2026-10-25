@@ -356,7 +356,19 @@ function viewProfile(id) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  if (!$("profileGrid")) return;
+  if (!$("profileGrid")) {
+  const enterBtn = $("enterBtn");
+  const ageScreen = $("ageScreen");
+
+  if (enterBtn && ageScreen) {
+    enterBtn.onclick = function() {
+      sessionStorage.setItem("ragini18", "yes");
+      ageScreen.classList.add("hidden");
+    };
+  }
+
+  return;
+}
 
   $("year").textContent = new Date().getFullYear();
 
