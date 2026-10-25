@@ -636,3 +636,77 @@ button:hover,
     line-height: 1.75;
   }
 }
+/* WIDE HERO BANNER FIX */
+.hero-slideshow {
+  width: 100%;
+  max-width: 100%;
+  min-height: 600px;
+  box-sizing: border-box;
+  padding: 50px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-slideshow .hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.hero-slideshow .hero-content h1 {
+  width: 100%;
+  max-width: 1100px;
+  margin: 15px auto 25px;
+  font-size: clamp(32px, 4vw, 58px);
+  line-height: 1.25;
+}
+
+.hero-slideshow .hero-content h1 span {
+  display: block;
+  font-size: 0.65em;
+  margin-top: 12px;
+}
+
+.hero-slideshow .hero-content > p:not(.gold-text):not(.hero-note) {
+  width: 100%;
+  max-width: 1100px;
+  margin: 20px auto;
+  color: #f7f4ee;
+  font-size: 17px;
+  line-height: 1.8;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.hero-slideshow .hero-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 600px) {
+  .hero-slideshow {
+    min-height: 600px;
+    padding: 30px 12px;
+  }
+
+  .hero-slideshow .hero-content {
+    padding: 12px;
+  }
+
+  .hero-slideshow .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-slideshow .hero-content > p:not(.gold-text):not(.hero-note) {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
