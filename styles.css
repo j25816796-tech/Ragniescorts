@@ -116,7 +116,7 @@ nav a:hover {
 }
 
 .hero-content > p:not(.gold-text) {
-  max-width: 520px;
+  max-width: 100%;
   color: #c4b9aa;
   overflow-wrap: break-word;
 }
