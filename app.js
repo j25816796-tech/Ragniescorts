@@ -356,19 +356,32 @@ function viewProfile(id) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  if (!$("profileGrid")) {
   const enterBtn = $("enterBtn");
   const ageScreen = $("ageScreen");
 
   if (enterBtn && ageScreen) {
+    if (sessionStorage.getItem("ragini18") === "yes") {
+      ageScreen.classList.add("hidden");
+    }
+
     enterBtn.onclick = function() {
       sessionStorage.setItem("ragini18", "yes");
       ageScreen.classList.add("hidden");
     };
+
+    const leaveBtn = $("leaveBtn");
+
+    if (leaveBtn) {
+      leaveBtn.onclick = function() {
+        ageScreen.innerHTML =
+          "<div class='age-card'><h2>Access unavailable</h2></div>";
+      };
+    }
   }
 
-  return;
-}
+  if (!$("profileGrid")) return;
+
+  $("year").textContent = new Date().getFullYear();
 
   $("year").textContent = new Date().getFullYear();
 
