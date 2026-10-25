@@ -76,6 +76,11 @@ function renderProfiles() {
 
   const search = $("searchInput").value.toLowerCase();
   const location = $("locationFilter").value;
+
+if (location === "Aerocity") {
+  window.location.href = "aerocity.html?v=2";
+  return;
+}
   const sort = $("sortFilter").value;
 
  const locations = [
