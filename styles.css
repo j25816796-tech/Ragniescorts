@@ -1037,3 +1037,28 @@ body:has(main.about-section) .about-section .gold-btn {
   color: #f5d58a;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
+/* Navy blue gradient with double golden border */
+.hero-slideshow {
+  background: linear-gradient(135deg, #071426, #142b45, #071426) !important;
+  border: 2px solid #d4af37 !important;
+  box-shadow: inset 0 0 0 6px #142033;
+  position: relative;
+}
+
+.hero-slideshow .hero-slide {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+.hero-slideshow .hero-slide::after {
+  display: none !important;
+}
+
+.hero-slideshow::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid #d4af37;
+  pointer-events: none;
+  z-index: 5;
+}
