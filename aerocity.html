@@ -45,7 +45,142 @@
 
   <a href="index.html" class="gold-btn">Back to Home</a>
 </main>
+<section class="pricing-section">
+  <div class="pricing-container"><p class="pricing-label">✧ AEROCITY, IGI AIRPORT ✧</p>
 
+<h2>Explore Our Services</h2>
+
+<p class="pricing-description">
+  Explore hospitality, travel and visitor information
+  for the Aerocity area in New Delhi.
+</p>
+
+<div class="pricing-grid">
+
+  <div class="pricing-card">
+    <h3>Standard</h3>
+    <p class="card-subtitle">Essential Services</p>
+    <div class="card-divider"></div>
+    <p>Local Area Information</p>
+    <p>Airport Connectivity</p>
+    <p>Visitor Guide</p>
+  </div>
+
+  <div class="pricing-card featured">
+    <span class="popular-tag">POPULAR</span>
+    <h3>Premium</h3>
+    <p class="card-subtitle">Travel Services</p>
+    <div class="card-divider"></div>
+    <p>Hotel Information</p>
+    <p>Dining Options</p>
+    <p>Transport Guidance</p>
+  </div>
+
+  <div class="pricing-card">
+    <h3>VIP</h3>
+    <p class="card-subtitle">Visitor Services</p>
+    <div class="card-divider"></div>
+    <p>Airport Guide</p>
+    <p>Business District</p>
+    <p>Nearby Attractions</p>
+  </div>
+
+</div>
+
+  </div>
+</section><style>
+.pricing-section {
+  background: #071629;
+  color: #fff;
+  padding: 55px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.pricing-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.pricing-label {
+  color: #d6b46a;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.pricing-container h2 {
+  color: #e5c477;
+  font-size: 32px;
+  margin: 15px 0;
+}
+
+.pricing-description {
+  color: #c8d0dc;
+  max-width: 650px;
+  margin: 0 auto 35px;
+  line-height: 1.8;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.pricing-card {
+  position: relative;
+  background: #0c2037;
+  border: 1px solid #b99a54;
+  border-radius: 12px;
+  padding: 30px 18px;
+  box-sizing: border-box;
+}
+
+.pricing-card h3 {
+  color: #e5c477;
+  font-size: 23px;
+}
+
+.card-subtitle {
+  color: #d5dbe4;
+  font-size: 14px;
+}
+
+.card-divider {
+  height: 1px;
+  background: #b99a54;
+  margin: 22px 0;
+}
+
+.pricing-card > p:not(.card-subtitle) {
+  color: #fff;
+  line-height: 1.8;
+}
+
+.featured {
+  border-width: 2px;
+}
+
+.popular-tag {
+  display: inline-block;
+  background: #d6b46a;
+  color: #071629;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-container h2 {
+    font-size: 26px;
+  }
+}
+</style>
 <footer class="footer">
   <p>© Ragini Directory</p>
 </footer>
