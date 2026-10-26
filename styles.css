@@ -1096,3 +1096,25 @@ body:has(main.about-section) .about-section .gold-btn {
   line-height: 1.9;
   letter-spacing: 0.15px;
 }
+/* Gold boxed Book Now buttons */
+.price-book {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  color: #fff4d4;
+  background: linear-gradient(135deg, #9d7b2e, #d8b85f);
+  border: 1px solid #f0d98f;
+  border-radius: 8px;
+  padding: 13px 10px;
+  margin-top: 18px;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
+}
+
+.price-book:hover {
+  filter: brightness(1.12);
+  transform: translateY(-2px);
+}
