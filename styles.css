@@ -955,3 +955,53 @@ body:has(main.about-section) .about-section .gold-btn {
     padding: 10px 12px;
   }
 }
+/* PREMIUM GOLD FRAME FOR HERO SLIDESHOW */
+.hero-slideshow {
+  position: relative;
+  isolation: isolate;
+  border: 2px solid #d4af37;
+  outline: 1px solid rgba(255, 215, 140, 0.65);
+  outline-offset: -9px;
+  box-shadow:
+    inset 0 0 0 5px rgba(212, 175, 55, 0.12),
+    0 8px 28px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+}
+
+/* Decorative gold corners */
+.hero-slideshow::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(255, 215, 140, 0.65);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Dark luxury overlay for better text readability */
+.hero-slideshow .hero-slide::after {
+  background: linear-gradient(
+    90deg,
+    rgba(8, 15, 29, 0.82),
+    rgba(8, 15, 29, 0.52),
+    rgba(8, 15, 29, 0.72)
+  );
+}
+
+/* Gold heading accents */
+.hero-slideshow .gold-text {
+  color: #f0cf83;
+  letter-spacing: 3px;
+}
+
+.hero-slideshow h1 {
+  color: #ffe6ad;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.55);
+}
+
+/* Mobile spacing */
+@media (max-width: 600px) {
+  .hero-slideshow::before {
+    inset: 8px;
+  }
+}
