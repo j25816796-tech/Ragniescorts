@@ -116,8 +116,11 @@ nav a:hover {
 }
 
 .hero-content > p:not(.gold-text) {
-  font-size: 18px;
-  line-height: 1.7;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #F3E8E8;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
 }
 .gold-btn, .outline-btn {
   display: inline-block;
