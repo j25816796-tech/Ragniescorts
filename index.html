@@ -281,7 +281,74 @@ Welcome to Mahipalpur's finest Russian escort service. Every Russian escort in M
   </div>
   <a href="privacy.html" class="outline-btn">Privacy Policy</a>
 </section>
+<section id="locations" class="premium-locations">
+  <div class="locations-inner">
+    <p class="locations-eyebrow">EXPLORE OUR AREAS</p>
+    <h2>Premium Escort Locations</h2>
+    <p class="locations-description">
+      Serving Delhi NCR with verified companions across 100+ locations.
+      From luxury hotels to private encounters, find your perfect experience.
+    </p>
 
+    <div class="locations-stats">
+      <span>100+ Locations</span>
+      <span>24/7 Available</span>
+      <span>100% Verified</span>
+    </div>
+
+    <div class="location-tabs">
+      <button type="button" class="location-tab active"
+        data-location="Mahipalpur">Mahipalpur</button>
+      <button type="button" class="location-tab"
+        data-location="Aerocity">Aerocity</button>
+      <button type="button" class="location-tab"
+        data-location="Delhi">Delhi</button>
+      <button type="button" class="location-tab"
+        data-location="Central Delhi">Central Delhi</button>
+      <button type="button" class="location-tab"
+        data-location="Gurgaon & NCR">Gurgaon &amp; NCR</button>
+    </div>
+
+    <div class="location-content" aria-live="polite">
+      <h3 id="location-title">Mahipalpur</h3>
+      <p id="location-description">
+        Explore available adult companion profiles in Mahipalpur, Delhi.
+        Adults 18+ only. Respect, privacy and consent are essential.
+      </p>
+      <a href="aerocity.html" id="location-link">Explore Location →</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  const descriptions = {
+    "Mahipalpur": "Explore available adult companion profiles in Mahipalpur, Delhi. Adults 18+ only. Respect, privacy and consent are essential.",
+    "Aerocity": "Explore adult companion directory information around Aerocity and the airport area. Adults 18+ only; respect and consent matter.",
+    "Delhi": "Browse location information for Delhi. Adults 18+ only. Prioritise privacy, respect and clear consent.",
+    "Central Delhi": "Explore directory information for Central Delhi and nearby areas. Adults 18+ only; respect and consent are essential.",
+    "Gurgaon & NCR": "Explore location information for Gurgaon and Delhi NCR. Adults 18+ only. Privacy, respect and consent come first."
+  };
+
+  const tabs = document.querySelectorAll("#locations .location-tab");
+  const title = document.getElementById("location-title");
+  const description = document.getElementById("location-description");
+  const link = document.getElementById("location-link");
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      const location = tab.dataset.location;
+      tabs.forEach(function (item) {
+        item.classList.toggle("active", item === tab);
+      });
+      title.textContent = location;
+      description.textContent = descriptions[location];
+      link.textContent = "Explore " + location + " →";
+      link.href = location === "Aerocity" ? "aerocity.html" : "#profiles";
+    });
+  });
+})();
+</script>
 <footer class="footer">
   <p>© <span id="year"></span> Ragini Directory</p>
   <a href="privacy.html">Privacy Policy</a>
@@ -499,74 +566,7 @@ Welcome to Mahipalpur's finest Russian escort service. Every Russian escort in M
 }
 </style>
   <!-- Premium Locations Section -->
-<section id="locations" class="premium-locations">
-  <div class="locations-inner">
-    <p class="locations-eyebrow">EXPLORE OUR AREAS</p>
-    <h2>Premium Escort Locations</h2>
-    <p class="locations-description">
-      Serving Delhi NCR with verified companions across 100+ locations.
-      From luxury hotels to private encounters, find your perfect experience.
-    </p>
 
-    <div class="locations-stats">
-      <span>100+ Locations</span>
-      <span>24/7 Available</span>
-      <span>100% Verified</span>
-    </div>
-
-    <div class="location-tabs">
-      <button type="button" class="location-tab active"
-        data-location="Mahipalpur">Mahipalpur</button>
-      <button type="button" class="location-tab"
-        data-location="Aerocity">Aerocity</button>
-      <button type="button" class="location-tab"
-        data-location="Delhi">Delhi</button>
-      <button type="button" class="location-tab"
-        data-location="Central Delhi">Central Delhi</button>
-      <button type="button" class="location-tab"
-        data-location="Gurgaon & NCR">Gurgaon &amp; NCR</button>
-    </div>
-
-    <div class="location-content" aria-live="polite">
-      <h3 id="location-title">Mahipalpur</h3>
-      <p id="location-description">
-        Explore available adult companion profiles in Mahipalpur, Delhi.
-        Adults 18+ only. Respect, privacy and consent are essential.
-      </p>
-      <a href="aerocity.html" id="location-link">Explore Location →</a>
-    </div>
-  </div>
-</section>
-
-<script>
-(function () {
-  const descriptions = {
-    "Mahipalpur": "Explore available adult companion profiles in Mahipalpur, Delhi. Adults 18+ only. Respect, privacy and consent are essential.",
-    "Aerocity": "Explore adult companion directory information around Aerocity and the airport area. Adults 18+ only; respect and consent matter.",
-    "Delhi": "Browse location information for Delhi. Adults 18+ only. Prioritise privacy, respect and clear consent.",
-    "Central Delhi": "Explore directory information for Central Delhi and nearby areas. Adults 18+ only; respect and consent are essential.",
-    "Gurgaon & NCR": "Explore location information for Gurgaon and Delhi NCR. Adults 18+ only. Privacy, respect and consent come first."
-  };
-
-  const tabs = document.querySelectorAll("#locations .location-tab");
-  const title = document.getElementById("location-title");
-  const description = document.getElementById("location-description");
-  const link = document.getElementById("location-link");
-
-  tabs.forEach(function (tab) {
-    tab.addEventListener("click", function () {
-      const location = tab.dataset.location;
-      tabs.forEach(function (item) {
-        item.classList.toggle("active", item === tab);
-      });
-      title.textContent = location;
-      description.textContent = descriptions[location];
-      link.textContent = "Explore " + location + " →";
-      link.href = location === "Aerocity" ? "aerocity.html" : "#profiles";
-    });
-  });
-})();
-</script>
 <div class="modal hidden" id="profileModal">
   <div class="modal-content" id="modalContent">
     <button class="close-btn" id="closeModal">×</button>
