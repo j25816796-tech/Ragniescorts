@@ -1005,3 +1005,35 @@ body:has(main.about-section) .about-section .gold-btn {
     inset: 8px;
   }
 }
+/* Luxury slideshow - no background image */
+.hero-slideshow {
+  position: relative;
+  background: linear-gradient(135deg, #071426, #142b45, #071426) !important;
+  border: 2px solid #d4af37;
+  outline: 1px solid rgba(255, 215, 140, 0.7);
+  outline-offset: -8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+}
+
+/* Remove slideshow background images */
+.hero-slideshow .hero-slide {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Elegant inner gold border */
+.hero-slideshow::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.7);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Heading color */
+.hero-slideshow h1 {
+  color: #f5d58a;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
