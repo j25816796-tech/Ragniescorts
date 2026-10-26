@@ -797,3 +797,49 @@ body:has(main.about-section) .about-section p:not(.gold-text) {
 body:has(main.about-section) .about-section .gold-btn {
   margin-top: 18px;
 }
+/* Aerocity heading and paragraph */
+.aerocity-hero {
+  text-align: center;
+  padding: 65px 24px 75px;
+  background: linear-gradient(135deg, #101827, #172A49);
+}
+
+.aerocity-hero .gold-text {
+  color: #D9B56D;
+  font: 600 12px/1.6 Arial, sans-serif;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.aerocity-hero h1 {
+  max-width: 950px;
+  margin: 0 auto 28px;
+  color: #F5F2EC;
+  font: 400 clamp(36px, 5vw, 64px)/1.12 Georgia, serif;
+}
+
+.aerocity-hero h1 span {
+  color: #E3B94F;
+}
+
+.aerocity-hero .aerocity-description {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #E0E5EF;
+  font: 400 17px/1.8 Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .aerocity-hero {
+    padding: 48px 18px 55px;
+  }
+
+  .aerocity-hero .gold-text {
+    letter-spacing: 2px;
+  }
+
+  .aerocity-hero .aerocity-description {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
