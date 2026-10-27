@@ -1,109 +1,229 @@
-/* ===== FINAL SHARED NAVIGATION HEADER ===== */
-.header {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  padding: 16px 24px;
-  position: relative;
-  z-index: 1000;
-  background: linear-gradient(110deg, #071426, #102b4c, #071426) !important;
-  border-bottom: 2px solid #d4af65;
-  color: #f7f4ee;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore VIP companion profiles at Ragini Escorts.">
+<title>VIP Companions | Ragini Escorts</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#071426;--blue:#102b4a;--gold:#d4af65;--pale:#f1dca8;--white:#f7f4ee;--muted:#c0c5d2}
+html{scroll-behavior:smooth}
+body{background:linear-gradient(135deg,#071426,#102b4a,#071426);color:var(--white);font-family:Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.header{width:100%;display:flex;flex-direction:row;justify-content:space-between;align-items:center;gap:18px;padding:16px 24px;background:#071426;border-bottom:2px solid var(--gold);position:relative;z-index:10}
+.brand{flex:0 0 auto;color:var(--gold);font:600 20px Georgia,serif;letter-spacing:2px}
+.brand small{display:block;color:#d4dbea;font:700 9px Arial,sans-serif;letter-spacing:3px}
+nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px 16px}
+nav a{color:var(--white);font-size:11px;font-weight:700;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--gold)}
+.header-actions{display:flex;gap:8px;align-items:center}
+.gold-btn,.outline-btn{display:inline-block;padding:11px 14px;border:1px solid var(--gold);border-radius:4px;font-size:11px;font-weight:bold;text-align:center}
+.gold-btn{background:var(--gold);color:#101522}
+.outline-btn{color:var(--white);background:transparent}
+.menu-toggle{display:none;background:var(--gold);color:#101522;border:0;border-radius:4px;padding:8px 12px;font-size:23px;cursor:pointer}
+.hero{text-align:center;padding:52px 20px 30px}
+.eyebrow{color:var(--gold);font-size:11px;font-weight:bold;letter-spacing:3px;margin-bottom:12px}
+.hero h1{color:var(--pale);font:500 clamp(32px,4vw,46px)/1.2 Georgia,serif;margin-bottom:14px}
+.hero p{max-width:750px;margin:auto;color:var(--muted);font-size:14px;line-height:1.8}
+.container{max-width:1250px;margin:auto;padding:15px 22px 60px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.card{min-width:0;overflow:hidden;background:linear-gradient(160deg,#102641,#09182b);border:1px solid #344963;border-radius:8px;box-shadow:0 8px 24px #0003;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.photo{height:265px;background:linear-gradient(145deg,#203c5b,#0a1729);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#c5ccda;font-size:12px;text-align:center}
+.photo .symbol{font-size:38px;color:var(--gold)}
+.info{padding:15px}
+.tag{font-size:9px;letter-spacing:1.5px;color:var(--gold);text-transform:uppercase;margin-bottom:7px}
+.info h2{font:600 22px Georgia,serif;color:var(--pale);margin-bottom:6px}
+.location{font-size:11px;color:#cbd3e1;margin-bottom:10px}
+.desc{font-size:12px;line-height:1.7;color:#d5dbe5;min-height:62px;margin-bottom:12px}
+.age{font-size:11px;color:#e5c77f;margin-bottom:14px}
+.view{display:block;text-align:center;padding:11px;border:1px solid var(--gold);border-radius:4px;color:var(--gold);font-size:12px;font-weight:bold}
+.view:hover{background:var(--gold);color:#101522}
+.notice{max-width:750px;text-align:center;margin:28px auto 0;color:#aab5c8;font-size:11px;line-height:1.8}
+footer{text-align:center;padding:24px 16px;border-top:1px solid #34445a;color:#aab5c8;font-size:11px}
+@media(max-width:1100px){
+ .header{flex-wrap:wrap}
+ .header nav{order:3;width:100%}
+ .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
-
-.header .brand {
-  flex: 0 0 auto;
-  color: #e5c477;
-  font-size: 20px;
-  letter-spacing: 2px;
+@media(max-width:760px){
+ .header{padding:14px 16px;flex-wrap:wrap}
+ .brand{font-size:18px}
+ .menu-toggle{display:block}
+ .header-actions{margin-left:auto}
+ .header nav{display:none;order:4;width:100%;flex-direction:column;align-items:stretch;gap:0;background:#071426}
+ .header nav.menu-open{display:flex}
+ .header nav a{padding:12px 8px;border-top:1px solid #263a50;font-size:12px;white-space:normal}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+ .photo{height:220px}
+ .hero{padding:38px 17px 24px}
+ .container{padding:12px 13px 40px}
 }
-
-.header nav {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: clamp(8px, 1.4vw, 20px);
-  min-width: 0;
+@media(max-width:430px){
+ .brand{font-size:16px;letter-spacing:1px}
+ .header-actions .outline-btn{display:none}
+ .grid{gap:10px}
+ .photo{height:170px}
+ .info{padding:11px}
+ .info h2{font-size:18px}
+ .desc{font-size:11px;min-height:82px}
+ .tag{font-size:8px}
+ .hero p{font-size:13px}
 }
+</style>
+</head>
 
-.header nav a {
-  color: #f7f4ee !important;
-  font-size: 12px;
-  font-weight: 700;
-  white-space: nowrap;
-}
+<body>
+<header class="header">
+  <a class="brand" href="index.html">Ⓡ RAGINI
+    <small>ESCORTS SERVICE NO-1</small>
+  </a>
 
-.header nav a:hover {
-  color: #e5c477 !important;
-}
+  <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
 
-.header .gold-btn,
-.header .outline-btn {
-  flex: 0 0 auto;
-  margin-top: 0;
-  white-space: nowrap;
-}
+  <nav id="mainNav">
+    <a href="index.html">ESCORTS HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="index.html#locations">LOCATIONS</a>
+    <a href="index.html#mahipalpur">ESCORT IN MAHIPALPUR</a>
+    <a class="active" href="vip-companions.html">VIP COMPANIONS</a>
+    <a href="index.html#experiences">EXPERIENCES</a>
+    <a href="index.html#gallery">GALLERY</a>
+    <a href="rate-card.html">RATES</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="index.html#contact">CONTACT</a>
+  </nav>
 
-.header .gold-btn {
-  background: #d4af65;
-  color: #101522;
-  border-color: #f1dca8;
-}
+  <div class="header-actions">
+    <a class="outline-btn" href="index.html#contact">CALL NOW</a>
+    <a class="gold-btn" href="index.html#contact">BOOK NOW</a>
+  </div>
+</header>
 
-.header .menu-toggle {
-  display: none;
-}
+<section class="hero">
+  <div class="eyebrow">LUXURY · ELEGANCE · PROFESSIONALISM</div>
+  <h1>Premium &amp; VIP Escorts</h1>
+  <p>Explore our sample companion profiles and learn about their interests, personalities and preferred locations.</p>
+</section>
 
-@media (max-width: 1050px) {
-  .header {
-    flex-wrap: wrap;
-  }
+<main class="container">
+  <section class="grid" aria-label="VIP companion profiles">
 
-  .header nav {
-    order: 3;
-    flex: 1 0 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px 18px;
-  }
-}
+    <article class="card">
+      <div class="photo"><span class="symbol">✧</span>Photo coming soon</div>
+      <div class="info">
+        <div class="tag">VIP Companion</div>
+        <h2>Anika Verma</h2>
+        <div class="location">⌖ Karol Bagh, Delhi</div>
+        <p class="desc">Elegant and sophisticated, with a warm personality and an appreciation for art and culture.</p>
+        <div class="age">24 years</div>
+        <a class="view" href="index.html#contact">View Profile →</a>
+      </div>
+    </article>
 
-@media (max-width: 760px) {
-  .header {
-    flex-wrap: wrap;
-    padding: 14px 16px;
-  }
+    <article class="card">
+      <div class="photo"><span class="symbol">✧</span>Photo coming soon</div>
+      <div class="info">
+        <div class="tag">Luxury Companion</div>
+        <h2>Mehak Kapoor</h2>
+        <div class="location">⌖ Saket, Delhi</div>
+        <p class="desc">Graceful and thoughtful, with a modern outlook and a love of travel, music and culture.</p>
+        <div class="age">26 years</div>
+        <a class="view" href="index.html#contact">View Profile →</a>
+      </div>
+    </article>
 
-  .header .menu-toggle {
-    display: flex;
-    background: #d4af65;
-    color: #101522;
-  }
+    <article class="card">
+      <div class="photo"><span class="symbol">✧</span>Photo coming soon</div>
+      <div class="info">
+        <div class="tag">VIP Companion</div>
+        <h2>Alisha Khan</h2>
+        <div class="location">⌖ Noida</div>
+        <p class="desc">Confident and stylish, with interests in travel, food and discovering new places.</p>
+        <div class="age">25 years</div>
+        <a class="view" href="index.html#contact">View Profile →</a>
+      </div>
+    </article>
 
-  .header nav {
-    display: none;
-    order: 4;
-    flex: 1 0 100%;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    background: #071426;
-    padding: 8px 14px;
-  }
+    <article class="card">
+      <div class="photo"><span class="symbol">✧</span>Photo coming soon</div>
+      <div class="info">
+        <div class="tag">Luxury Companion</div>
+        <h2>Pooja Roy</h2>
+        <div class="location">⌖ Dwarka, Delhi</div>
+        <p class="desc">Charming and soft-spoken, with an interest in music, films and cultural experiences.</p>
+        <div class="age">24 years</div>
+        <a class="view" href="index.html#contact">View Profile →</a>
+      </div>
+    </article>
 
-  .header nav.menu-open {
-    display: flex;
-  }
+    <article class="card">
+      <div class="photo"><span class="symbol">✧</span>Photo coming soon</div>
+      <div class="info">
+        <div class="tag">VIP Companion</div>
+        <h2>Kritika Verma</h2>
+        <div class="location">⌖ South Delhi</div>
+        <p class="desc">Cheerful and outgoing, with interests in photography, city outings and creative pursuits.</p>
+        <div class="age">23 years</div>
+        <a class="view" href="index.html#contact">View Profile →</a>
+      </div>
+    </article>
 
-  .header nav a {
-    padding: 12px 4px;
-    border-bottom: 1px solid #343b50;
-    white-space: normal;
-  }
-}
+    <article class="card">
+      <div class="photo"><span class="symbol">✧</span>Photo coming soon</div>
+      <div class="info">
+        <div class="tag">Luxury Companion</div>
+        <h2>Priya Sharma</h2>
+        <div class="location">⌖ Aerocity, Delhi</div>
+        <p class="desc">Warm and polished, with an appreciation for fine dining, travel and conversation.</p>
+        <div class="age">27 years</div>
+        <a class="view" href="index.html#contact">View Profile →</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="photo"><span class="symbol">✧</span>Photo coming soon</div>
+      <div class="info">
+        <div class="tag">VIP Companion</div>
+        <h2>Tanya Mehta</h2>
+        <div class="location">⌖ Vasant Kunj</div>
+        <p class="desc">Creative and sociable, with interests in fashion, photography and exploring Delhi.</p>
+        <div class="age">25 years</div>
+        <a class="view" href="index.html#contact">View Profile →</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="photo"><span class="symbol">✧</span>Photo coming soon</div>
+      <div class="info">
+        <div class="tag">Luxury Companion</div>
+        <h2>Ayesha Khan</h2>
+        <div class="location">⌖ Mahipalpur, Delhi</div>
+        <p class="desc">Relaxed and friendly, with an interest in food, travel and discovering new places.</p>
+        <div class="age">24 years</div>
+        <a class="view" href="index.html#contact">View Profile →</a>
+      </div>
+    </article>
+
+  </section>
+
+  <p class="notice">These are sample profile details for layout preview. Replace names, ages, locations and descriptions with accurate information before publishing. Only use photos with the subject's permission.</p>
+</main>
+
+<footer>© 2026 Ragini Escorts. All rights reserved.</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+
+menuToggle.addEventListener("click", function () {
+  const isOpen = mainNav.classList.toggle("menu-open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+  menuToggle.textContent = isOpen ? "✕" : "☰";
+});
+</script>
+</body>
+</html>
