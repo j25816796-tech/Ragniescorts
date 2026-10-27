@@ -359,6 +359,144 @@
         width: 100%;
       }
     }
+    /* About story — screenshot-inspired design */
+.story-section {
+  padding: 65px 24px;
+  color: #f5f5ff;
+  background:
+    radial-gradient(ellipse at 72% 85%,
+      #315b9b 0%, #172d56 45%, #080f22 100%);
+}
+
+.story-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 42px;
+  align-items: start;
+}
+
+.story-copy h2 {
+  margin: 0 0 26px;
+  color: #f7f4ed;
+  font: bold clamp(30px, 3.2vw, 40px)/1.12
+        Georgia, "Times New Roman", serif;
+}
+
+.story-copy p {
+  margin: 0 0 19px;
+  color: #dce4f5;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.story-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-top: 55px;
+}
+
+.story-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.story-stat {
+  min-height: 108px;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(5, 12, 28, 0.38);
+  border: 1px solid rgba(220, 190, 112, 0.42);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.story-stat strong {
+  color: #e4bd62;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.story-stat span {
+  color: #dce4f5;
+  font-size: 13px;
+}
+
+.commitment-card {
+  padding: 23px 24px;
+  border: 1px solid rgba(220, 190, 112, 0.5);
+  border-radius: 10px;
+  background: rgba(13, 29, 58, 0.55);
+}
+
+.commitment-card h3 {
+  margin: 0 0 17px;
+  color: #e4bd62;
+  font: bold 20px Georgia, "Times New Roman", serif;
+}
+
+.commitment-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.commitment-card li {
+  position: relative;
+  padding-left: 20px;
+  margin: 0 0 13px;
+  color: #e1e7f4;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.commitment-card li:last-child {
+  margin-bottom: 0;
+}
+
+.commitment-card li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: #e4bd62;
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  .story-section {
+    padding: 42px 18px;
+  }
+
+  .story-container {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .story-sidebar {
+    padding-top: 0;
+  }
+
+  .story-copy h2 {
+    font-size: 32px;
+  }
+
+  .story-copy p {
+    font-size: 14px;
+  }
+
+  .story-stat strong {
+    font-size: 26px;
+  }
+}
   </style>
 </head>
 
@@ -491,7 +629,7 @@
       </p>
 
       <p>
-        Priya Sharma Escorts was built to fix that. From day one, the rule
+        Ragini Escorts No-1 was built to fix that. From day one, the rule
         was non-negotiable: every companion is personally verified before
         listing. Photo matches real appearance. Age confirmed as 18+.
         Professional conduct assessed. This standard — common sense in
