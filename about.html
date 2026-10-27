@@ -662,6 +662,62 @@ footer .footer-grid {
     grid-template-columns: 1fr;
   }
 }
+    /* FIX FOOTER LAYOUT */
+.ragini-footer {
+  background: #10152f;
+  color: #e5e4ec;
+  padding: 55px 5% 20px;
+}
+
+.ragini-footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 0.8fr;
+  gap: 35px;
+}
+
+.ragini-footer-column h2,
+.ragini-footer-column h3 {
+  color: #dfbd68;
+  margin-bottom: 20px;
+}
+
+.ragini-footer-column p {
+  color: #d1cfdb;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.ragini-footer a {
+  color: #e5e4ec;
+  text-decoration: none;
+}
+
+.ragini-footer a:hover {
+  color: #dfbd68;
+}
+
+.ragini-footer-social a {
+  display: inline-block;
+  border: 1px solid #dfbd68;
+  border-radius: 5px;
+  padding: 10px 18px;
+  margin-top: 10px;
+}
+
+@media (max-width: 750px) {
+  .ragini-footer-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .ragini-footer-container {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 
