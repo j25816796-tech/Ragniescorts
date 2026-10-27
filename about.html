@@ -71,28 +71,31 @@
 
     /* Page banner */
     .banner {
-      padding: 65px 20px;
-      text-align: center;
-      color: white;
-      background:
-        linear-gradient(120deg, #11152f, #30233c);
-    }
+  min-height: 540px;
+  padding: 85px 20px 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  background: radial-gradient(
+    ellipse at center,
+    #416cb4 0%,
+    #24477f 45%,
+    #0b1a3a 100%
+  );
+}
 
-    .banner h1 {
-      font: normal 48px Georgia, serif;
-      margin-bottom: 12px;
-    }
-
-    .breadcrumb {
-      color: #ded8e6;
-      font-size: 14px;
-    }
-
-    .breadcrumb span {
-      color: #ed709c;
-      padding: 0 10px;
-    }
-
+.banner h1 {
+  max-width: 850px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: bold;
+  line-height: 1.12;
+  margin: 0 auto 18px;
+  color: #fffaf0;
+}
     /* About section */
     .container {
       max-width: 1160px;
