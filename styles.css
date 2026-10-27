@@ -1147,3 +1147,155 @@ body:has(main.about-section) .about-section .gold-btn {
   border-color: #d6b46a;
   color: #ffffff;
 }
+/* PREMIUM HOMEPAGE REDESIGN — CONTENT UNCHANGED */
+
+:root {
+  --luxury-navy: #07152f;
+  --luxury-blue: #142d58;
+  --luxury-gold: #d9b45b;
+  --luxury-white: #f8f5ee;
+}
+
+body {
+  background: var(--luxury-navy);
+  color: var(--luxury-white);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Header and navigation */
+.header {
+  background: rgba(7, 15, 35, 0.96) !important;
+  border-bottom: 1px solid rgba(217, 180, 91, 0.35);
+  padding: 14px 5%;
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  color: var(--luxury-gold) !important;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.header nav a,
+#mainNav a {
+  color: #f5f2ec !important;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  transition: color 0.25s ease;
+}
+
+.header nav a:hover,
+#mainNav a:hover {
+  color: var(--luxury-gold) !important;
+}
+
+.header-book {
+  background: var(--luxury-gold) !important;
+  color: #10182a !important;
+  border: 1px solid var(--luxury-gold);
+  border-radius: 10px;
+  padding: 13px 22px;
+  font-weight: 700;
+}
+
+/* Main hero background */
+.hero-slideshow {
+  position: relative;
+  overflow: hidden;
+  min-height: 620px;
+  background:
+    radial-gradient(ellipse at 50% 40%,
+      #244b88 0%,
+      #142d58 42%,
+      #07152f 100%) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 75px 24px;
+  box-sizing: border-box;
+}
+
+.hero-slideshow .hero-slide {
+  background-image: none !important;
+  opacity: 0 !important;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  color: var(--luxury-white);
+}
+
+.hero-content .gold-text {
+  display: inline-block;
+  color: var(--luxury-gold) !important;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin-bottom: 18px;
+}
+
+.hero-content h1 {
+  color: #fffaf0 !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 700;
+  line-height: 1.12;
+  margin: 12px auto 22px;
+  max-width: 900px;
+}
+
+.hero-content h1 span {
+  display: block;
+  color: var(--luxury-gold) !important;
+  font-size: 0.78em;
+  margin-top: 10px;
+}
+
+.hero-content p {
+  color: #e0e8f7;
+  line-height: 1.9;
+}
+
+/* Existing buttons */
+.hero-content a,
+.header-call,
+.header-book {
+  transition: all 0.25s ease;
+}
+
+.hero-content a {
+  border-radius: 30px;
+}
+
+.hero-content a:hover,
+.header-book:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(217, 180, 91, 0.22);
+}
+
+/* Responsive mobile layout */
+@media (max-width: 700px) {
+  .header {
+    padding: 12px 16px;
+  }
+
+  .hero-slideshow {
+    min-height: 560px;
+    padding: 55px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content h1 span {
+    font-size: 0.75em;
+  }
+}
